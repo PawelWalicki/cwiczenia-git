@@ -1,0 +1,122 @@
+$font-stack: Poppins, font-family;
+$primary-color: hsl(234, 12%, 34%);
+$secondary-color: hsl(229, 6%, 66%);
+
+.description {
+    margin: auto;
+    max-width: 40%;
+    text-align: center;
+
+    h1 {
+        color: $primary-color;
+    }
+
+    h2 {
+        color: $secondary-color;
+    }
+
+    h3 {
+        color: $secondary-color;
+    }
+}
+
+.container {
+    font: 100% $font-stack;
+    display: grid;
+    grid-template-areas:
+        ".     team       ."
+        "visor team       karma"
+        "visor calculator karma"
+        ".     calculator .";
+    justify-content: center;    
+}
+
+.btn {
+    width: 50px;
+    height: 20px;
+    border-radius: 2px;
+    &__cancel {
+        background-color: red;
+    }
+    &__confirm{
+        background-color: greenyellow;
+    }
+}
+
+.box {
+    margin: 20px;
+    height: 300px;
+    width: 25vw;
+
+    &-item{
+        display: grid;
+        background-color: rgb(255, 255, 255);
+        border-top-style: solid;
+        box-shadow: 2px 2px 8px rgb(131, 128, 128);
+        padding: 30px;
+        margin: 20px;
+        height: 20vh;
+        color: $secondary-color;
+    }
+    
+    .box-header {
+        font-weight: 600;
+        color: $primary-color;
+    }
+}
+
+.img {
+    display: grid;
+    justify-items: end;
+}
+
+.karma {
+    grid-area: karma;
+}
+
+.calculator {
+
+    grid-area: calculator;
+}
+
+.supervisor {
+
+    grid-area: visor;
+}
+
+.team {
+
+    grid-area: team;
+}
+
+
+.orange {
+    border-top-color: rgb(252, 175, 74);
+}
+
+.green {
+    border-top-color: rgb(69, 211, 211);
+}
+
+.red {
+    border-top-color: rgb(234, 83, 83);
+}
+
+.blue {
+    border-top-color: rgb(84, 158, 242);
+}
+
+@media (max-width: 900px) {
+    .box {
+        width: 75vw;
+        min-width: 300px;
+    }
+
+    .container {
+        grid-template-areas:
+            "team"
+            "visor"
+            "calculator"
+            "karma";
+    }
+}
